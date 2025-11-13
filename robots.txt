@@ -1,0 +1,45 @@
+Robots Exclusion Protocol (robots.txt) for Spot On Gifts and More
+
+This file tells search engine spiders which pages they can and cannot crawl.
+
+=== 1. Default Rules for All Web Crawlers (User-agent: *) ===
+
+This section applies to all search engine robots (Google, Bing, Yahoo, etc.)
+
+User-agent: *
+
+Allow crawling of all content by default.
+
+This is an explicit instruction to allow everything, which is often safer than omitting it.
+
+Allow: /
+
+Disallow crawling of common utility files and sensitive data.
+
+This prevents low-value, non-user-facing files from being indexed.
+
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /*.bak$
+Disallow: /*.old$
+
+Disallow specific image files mentioned in the HTML that might contain
+
+sensitive or low-quality content, ensuring focus remains on high-quality product images.
+
+Since you handle key cutting and watch repair, no sensitive user paths are disallowed.
+
+=== 2. Google-Specific Rules (Optional but good practice) ===
+
+If you ever needed specific rules just for Google, you would use this section.
+
+User-agent: Googlebot
+
+Disallow: /some-specific-google-only-path/
+
+=== 3. Sitemap Declaration (CRITICAL FOR SEO) ===
+
+This tells all major search engines exactly where to find your sitemap.
+
+Sitemap: https://www.google.com/search?q=https://spotongifts.co.za/sitemap.xml
