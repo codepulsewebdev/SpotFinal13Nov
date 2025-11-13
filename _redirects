@@ -1,0 +1,16 @@
+=== CANONICALIZATION REDIRECTS (301 PERMANENT) ===
+
+Ensures all traffic uses HTTPS and the non-www domain, consolidating SEO authority.
+
+1. Force HTTPS (HTTP to HTTPS)
+
+https://www.google.com/search?q=http://spotongifts.co.za/* https://www.google.com/search?q=https://spotongifts.co.za/:splat  301
+https://www.google.com/search?q=http://www.spotongifts.co.za/* https://www.google.com/search?q=https://spotongifts.co.za/:splat  301
+
+2. Force Non-WWW (WWW to Non-WWW)
+
+https://www.google.com/search?q=https://www.spotongifts.co.za/* https://www.google.com/search?q=https://spotongifts.co.za/:splat  301
+
+3. Clean up the index file (e.g., /index.html should be the root /)
+
+/index.html / 301
