@@ -580,5 +580,23 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+
+  // Optional: Close menu when clicking a link (better UX)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
+
 </body>
 </html>
