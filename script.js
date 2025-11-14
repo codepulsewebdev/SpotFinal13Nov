@@ -51,6 +51,17 @@ document.addEventListener('DOMContentLoaded', function() {
   createFloatingBalloons();
 });
 
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+}
+
 // ===========================
 // 🖼️ IMAGE MODAL FUNCTIONALITY - FIXED
 // ===========================
@@ -149,7 +160,7 @@ if (form) {
       const encodedMessage = encodeURIComponent(message);
 
       // WhatsApp URL
-      const whatsappNumber = "27840529141";
+      const whatsappNumber = "27713613866";
       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
       // Open WhatsApp
@@ -172,7 +183,7 @@ document.querySelector('form[name="customOrder"]').addEventListener('submit', fu
   const name = document.getElementById('name').value;
   const item = document.getElementById('itemType').value;
   const message = encodeURIComponent(`Hi! I'd like to order a ${item}.\nName: ${name}`);
-  window.open(`https://wa.me/27840529141?text=${message}`, '_blank');
+  window.open(`https://wa.me/27713613866?text=${message}`, '_blank');
 });
 
 // ===========================
