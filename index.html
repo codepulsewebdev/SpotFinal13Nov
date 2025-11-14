@@ -107,18 +107,30 @@
 
   <header>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-      <div class="logo"><img src="spot on logo.png" alt="Spot On Gifts Logo" width="150px" length="100px"></div>
-      <ul class="nav-links">
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#services">Products</a></li>
-        <li><a href="index.html#orderForm">Custom Order</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="https://www.instagram.com/spot_on_gifts?igsh=ajhvZHNyODhveXZp"><i class="fab fa-instagram"></i></a></li>
+  
+  <div class="logo">
+    <img src="spot on logo.png" alt="Spot On Gifts Logo" width="150">
+  </div>
 
-      </ul>
-     
-    </nav>
+  <button class="menu-toggle" aria-label="Open Menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Products</a></li>
+    <li><a href="index.html#orderForm">Custom Order</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://www.instagram.com/spot_on_gifts?igsh=ajhvZHNyODhveXZp">
+        <i class="fab fa-instagram"></i>
+    </a></li>
+  </ul>
+
+</nav>
+
   </header>
 
   <!-- Dark/Light Mode Toggle -->
@@ -374,17 +386,23 @@
 
     <div class="products-grid">
       <div class="Products-Box">
-        <img src="keys.jpg" alt="Key cutting service Johannesburg" loading="lazy">
+        <img src="batteryBrand.jpg" alt="Key cutting service Johannesburg" loading="lazy">
         <div class="product-info"><p class="product-name">Key Cutting Service</p></div>
       </div>
-      <div class="Products-Box">
-        <img src="keys2.jpg" alt="Duplicate keys made Lenasia" loading="lazy">
-        <div class="product-info"><p class="product-name">Duplicate Keys</p></div>
-      </div>
+      
       
       <div class="Products-Box">
-        <img src="keys3.htm" alt="Key accessories and services Lenasia" loading="lazy">
-        <div class="product-info"><p class="product-name">More Key Services</p></div>
+        <img src="keys.jpg" alt="Key accessories and services Lenasia" loading="lazy">
+        <div class="product-info"><p class="product-name">More Key Services</p>
+        </div>
+      </div>
+       <div class="Products-Box">
+        <a href="KeysAndBatteries.html">
+          <img src="keys3.jpg" alt="View more personalized balloons Johannesburg" loading="lazy">
+          <div class="product-info">
+            <p class="product-name">View More Keys and Batteries</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -429,10 +447,10 @@
       <label for="itemType">Select item type:</label>
       <select id="itemType" name="itemType" required>
         <option value="">-- Select an item --</option>
-        <option value="Balloon">See Through Balloon</option>
+        <option value="Balloon">Customised Balloon</option>
         <option value="Gift">Custom Mug</option>
-        <option value="Gift">Gift Basket</option>
-        <option value="Gift">Matric Survival Kit</option>
+        <option value="Gift">Gift Basket(Or similar)</option>
+        <option value="Gift">Other</option>
       </select>
 
       <label for="customText">Custom text / message:</label>
@@ -483,9 +501,13 @@
 
               <p>Cnr Protea and Garrick Ave Shop No 4<br>Lenasia Dr, Johannesburg, 1821</p>
 
-            </div>
 
-          </div>
+            <i class="fas fa-phone"></i>
+               <h3>Call Us</h3>
+
+              <p>+27 84 052 9141<br>+27 71 361 3866</p>
+            </div>
+        </div>
 
          
 
@@ -497,29 +519,76 @@
 
               <h3>Operating Hours</h3>
 
-              <p>Monday - Sunday<br>9:30 AM - 12:00 PM<br>1:00 PM - 6:00 PM</p>
+              <p>Monday - Thursday<br>9:30 AM - 12:00 PM<br>1:00 PM - 6:00 PM</p><br/>
+              <p>Friday<br/>09:30-11:30<br/>14:30-18:00</p><br/>
+              <p>Saturday<br>09:30-17:30<p><br/>
+              <p>Sunday<br/>09:30-13:30</p><br/>
+              <p id="notice" class="notice">Times are subject to change without prior notice<br/>Please CALL in advance to avoid dissappointment</p>
 
             </div>
 
           </div>
+         <div class="contact-item">
 
-         
-
-          <div class="contact-item">
-
-            <i class="fas fa-phone"></i>
+            <i class="fas fa-clock"></i>
 
             <div>
 
-              <h3>Call Us</h3>
+              <h3>FAQs</h3>
+              <style>
+.faq-item {
+  margin-bottom: 1em;
+  font-family: Arial, sans-serif;
+}
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+.faq-answer {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  color: #555;
+  margin-top: 0.3em;
+}
+.faq-question:hover + .faq-answer {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100px;
+}
+</style>
 
-              <p>+27 84 052 9141<br>+27 71 361 3866</p>
+<div class="faq-item">
+  <div class="faq-question">What types of balloons do you offer?</div>
+  <div class="faq-answer">We offer latex, foil, helium, LED, and custom-printed balloons for all occasions.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">Do you deliver balloons?</div>
+  <div class="faq-answer">Please Contact Us to Enquire</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">Can I customize balloons with names or logos?</div>
+  <div class="faq-answer">Absolutely! We provide custom printing for birthdays, weddings, and corporate events.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">How long do helium balloons last?</div>
+  <div class="faq-answer">Helium latex balloons last 8–12 hours, while foil balloons can float for up to 5 days.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">Do you offer balloon setup for events?</div>
+  <div class="faq-answer">Yes, we offer full event decoration centerpieces.</div>
+</div>
 
             </div>
 
           </div>
-
         </div>
+      </div>
+    </section>
+    
+      
 
 
 
