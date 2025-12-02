@@ -37,71 +37,194 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!-- ✅ JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
+ <!-- ⭐ IMPROVED LOCALBUSINESS SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://yourdomain.com/#localbusiness",
+  "name": "Spot On Gifts and More",
+  "url": "https://yourdomain.com",
+  "image": "https://yourdomain.com/images/SpotOnGiftsLogo.png",
+  "description": "Spot On Gifts and More offers professional key cutting, personalized gifts, custom balloons and batteries in Lenasia, Johannesburg South.",
+  "telephone": "+27 84 052 9141",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Cnr Protea and Garrick Ave, Shop No 4, Lenasia Dr",
+    "addressLocality": "Johannesburg",
+    "addressRegion": "Gauteng",
+    "postalCode": "1821",
+    "addressCountry": "ZA"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:30",
+      "closes": "18:00"
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-26.3150",
+    "longitude": "27.8210"
+  },
+  "sameAs": [
+    "https://www.instagram.com/spot_on_gifts"
+  ],
+  "knowsAbout": [
+    "Key Cutting",
+    "Key Duplication",
+    "Battery Replacement",
+    "Key Accessories",
+    "Custom Gifts",
+    "Personalized Balloons",
+    "Party Decor"
+  ],
+  "areaServed": [
+    "Lenasia",
+    "Johannesburg South",
+    "Ennerdale",
+    "Eldorado Park",
+    "Orange Farm",
+    "Southgate"
+  ]
+}
+</script>
+
+<!-- ⭐ SERVICE SCHEMA: KEY CUTTING -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://yourdomain.com/#keycutting",
+  "serviceType": "Key Cutting Service",
+  "provider": {
     "@type": "LocalBusiness",
     "name": "Spot On Gifts and More",
-    "image": "https://yourdomain.com/images/SpotOnGiftsLogo.png",
-    "@id": "https://yourdomain.com",
-    "url": "https://yourdomain.com",
-    "telephone": "+27 84 052 9141",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Cnr Protea and Garrick Ave, Shop No 4, Lenasia Dr",
-      "addressLocality": "Johannesburg",
-      "postalCode": "1821",
-      "addressCountry": "ZA"
-    },
-    "openingHoursSpecification": [
+    "url": "https://yourdomain.com"
+  },
+  "description": "Professional key cutting services in Lenasia and Johannesburg South. We cut house keys, car keys, gate keys, padlock keys, remote keys and more with fast while-you-wait service.",
+  "areaServed": [
+    "Lenasia",
+    "Johannesburg South",
+    "Eldorado Park",
+    "Ennerdale",
+    "Orange Farm"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Key Cutting and Accessories",
+    "itemListElement": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "09:30",
-        "closes": "18:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/spot_on_gifts"
-    ],
-    "description": "Spot On Gifts and More provides customized balloons, personalized gifts, and party décor in Lenasia, Johannesburg. Perfect for birthdays, weddings, and special events."
-  }
-  </script>
-
-  <!-- ✅ FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Do you deliver in Johannesburg?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! Spot On Gifts and More delivers custom gifts and balloons throughout Johannesburg and nearby areas."
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "House Key Cutting"
         }
       },
       {
-        "@type": "Question",
-        "name": "Can I order a custom balloon with my name or logo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely! You can order personalized see-through balloons with names, messages, or even your company logo."
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Car Key Cutting (Non-chip)"
         }
       },
       {
-        "@type": "Question",
-        "name": "How long does a personalized order take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most custom orders are ready within 24–48 hours depending on complexity. We'll confirm your order via WhatsApp immediately."
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gate & Padlock Key Cutting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Remote Key Shells & Accessories"
         }
       }
     ]
   }
-  </script>
+}
+</script>
+
+<!-- ⭐ PRODUCT SCHEMA FOR KEY CUTTING & ACCESSORIES -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "@id": "https://yourdomain.com/#keycuttingproduct",
+  "name": "Key Cutting Service – Lenasia",
+  "image": [
+    "https://yourdomain.com/images/keys1.jpg",
+    "https://yourdomain.com/images/keys2.jpg"
+  ],
+  "description": "Fast and accurate key cutting in Lenasia, Johannesburg South. Includes house keys, car keys, gate keys, padlock keys and key accessories.",
+  "brand": "Spot On Gifts and More",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://yourdomain.com/KeysAndBatteries.html",
+    "priceCurrency": "ZAR",
+    "price": "15",
+    "priceValidUntil": "2026-12-31",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+
+<!-- ⭐ UPDATED + ENHANCED FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer key cutting in Lenasia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Spot On Gifts and More offers fast, precise key cutting for house keys, gate keys, padlock keys, car keys and more in Lenasia, Johannesburg South."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does key cutting take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most keys are cut within 1–5 minutes. We offer while-you-wait service for all standard keys."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I order custom balloons with names or logos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! We customize balloons with names, messages, numbers and company logos while offering various colour and size options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you deliver in Johannesburg?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we deliver balloons, gifts and accessories throughout Johannesburg and surrounding areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you replace batteries for remotes or toys?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We provide battery replacements for remotes, car keys, toys and small electronic devices."
+      }
+    }
+  ]
+}
+</script>
+
     <!-- 🎈 Floating Balloon Background -->
   <div class="balloon-wall" aria-hidden="true" id="balloonWall"></div>
 
@@ -125,7 +248,7 @@
     <li><a href="blog.html">Blog</a></li>
     <li><a href="index.html#services">Products</a></li>
     <li><a href="index.html#orderForm">Custom Order</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
     <li>
       <a href="https://www.instagram.com/spot_on_gifts?igsh=ajhvZHNyODhveXZp">
         <i class="fab fa-instagram"></i>
@@ -373,35 +496,56 @@
     </div>
   </section>
 
-  <!-- KEY CUTTING -->
-  <section class="semi-transparent-box-rgba" aria-label="Key Cutting Services Lenasia">
-    <h2 class="section-heading">🔑 Key Cutting & Accessories</h2>
-    <p class="section-intro">
-      Get your keys cut quickly and accurately — we even make custom key tags for a personal touch.
-    </p>
+  <!-- KEY CUTTING SECTION – SEO OPTIMIZED -->
+<section class="semi-transparent-box-rgba key-cutting-section" 
+         aria-label="Key Cutting Services in Lenasia, Johannesburg South">
+  <h2 class="section-heading">🔑 Professional Key Cutting in Lenasia – Fast, Accurate & Affordable</h2>
 
-    <div class="products-grid">
-      <div class="Products-Box">
-        <img src="batteryBrand.jpg" alt="Key cutting service Johannesburg" loading="lazy">
-        <div class="product-info"><p class="product-name">Key Cutting Service</p></div>
-      </div>
-      
-      
-      <div class="Products-Box">
-        <img src="keys.jpg" alt="Key accessories and services Lenasia" loading="lazy">
-        <div class="product-info"><p class="product-name">More Key Services</p>
-        </div>
-      </div>
-       <div class="Products-Box">
-        <a href="KeysAndBatteries.html">
-          <img src="keys3.jpg" alt="View more personalized balloons Johannesburg" loading="lazy">
-          <div class="product-info">
-            <p class="product-name">View More Keys and Batteries</p>
-          </div>
-        </a>
+  <p class="section-intro">
+    Looking for reliable <strong>key cutting services in Lenasia, Johannesburg South</strong>? 
+    We cut house keys, car keys, padlock keys, gate keys, remote keys and more — with 
+    precision, while you wait. We also offer custom key tags, batteries and key accessories.
+  </p>
+
+  <div class="products-grid">
+    
+    <div class="Products-Box">
+      <img src="batteryBrand.jpg" 
+           alt="Key cutting service in Lenasia Johannesburg South – house keys, car keys, duplications" 
+           loading="lazy">
+      <div class="product-info">
+        <p class="product-name">Key Cutting Service – Lenasia</p>
       </div>
     </div>
-  </section>
+
+    <div class="Products-Box">
+      <a href="key-cutting-lenasia.html">
+      <img src="keys.jpg" 
+           alt="Key accessories, key tags, key rings and key duplication services in Johannesburg South" 
+           loading="lazy">
+      <div class="product-info">
+      <div class="product-info">
+          <p class="product-name">See more key cutting...</p>
+        </div>
+      </a>
+      </div>
+    </div>
+
+    <div class="Products-Box">
+      <a href="KeysAndBatteries.html">
+        <img src="keyRing5.jpg" 
+             alt="View more key cutting and battery replacement services in Lenasia" 
+             loading="lazy">
+        <div class="product-info">
+          <p class="product-name">View Battery Services</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+ 
+
 
   <!-- WATCHES -->
   <section class="semi-transparent-box-rgba" aria-label="Watches and Repairs Lenasia">
@@ -515,7 +659,7 @@
 
               <h3>Operating Hours</h3>
 
-              <p>Monday - Thursday<br>9:30 AM - 12:00 PM<br>1:00 PM - 6:00 PM</p><br/>
+              <p>Monday - Thursday<br>9:30 AM - 1:00 PM<br>2:00 PM - 6:00 PM</p><br/>
               <p>Friday<br/>09:30-11:30<br/>14:30-18:00</p><br/>
               <p>Saturday<br>09:30-17:30<p><br/>
               <p>Sunday<br/>09:30-13:30</p><br/>
